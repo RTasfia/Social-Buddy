@@ -36,8 +36,8 @@ const Post = (props) => {
             <Card className={classes.root} variant="outlined">
                 <CardContent>
                     <Typography className={classes.pos} color="textPrimary"><h2 style={{textAlign : "center"}}>ID: {id}</h2></Typography>
-                    <Typography variant="body2" component="p"><h1>{title}</h1></Typography>
-                    <Typography variant="body2" component="p"><h3>{body}</h3></Typography>
+                    <Typography variant="body2"><h2>{title}</h2></Typography>
+                    <Typography variant="body2"><h4>{body}</h4></Typography>
 
                 </CardContent>
                 <CardActions>

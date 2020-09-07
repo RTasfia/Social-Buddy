@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Button } from '@material-ui/core';
 import CommentArea from '../CommentArea/CommentArea';
 import './PostDetail.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 const PostDetail = () => {
@@ -27,7 +25,7 @@ const PostDetail = () => {
                     <CommentArea></CommentArea>
                 </div>
             </Container>
-         </React.Fragment>
+        </React.Fragment>
         
     );
 };

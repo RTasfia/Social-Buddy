@@ -16,7 +16,6 @@ function App() {
         <Switch>
           <Route path="/post/:postId">
             <PostDetail></PostDetail>
-
           </Route>
           <Route exact path="/">
             <SocialBuddy></SocialBuddy>

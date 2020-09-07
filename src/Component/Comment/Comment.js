@@ -7,6 +7,9 @@ import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
+import IconButton from '@material-ui/core/IconButton';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
 import './Comment.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -36,22 +39,28 @@ const Comment = (props) => {
     const {email, name, body, img } = props.msg;
     const classes = useStyles();
     return (
-        <div className="comment">
-            <Card className={classes.root}>
-                <CardHeader
-                    avatar={
-                        <Avatar src={img}/>
-                    }
-                title={email}
-                />
-                <CardContent>
-                    <Typography variant="body2" color="textPrimary" component="p"> <h2>{name}</h2> </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p"> {body}</Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                </CardActions>
-            </Card>
-        </div>
+      <div className="comment">
+          <Card className={classes.root}>
+              <CardHeader
+                  avatar={
+                      <Avatar src={img}/>
+                  }
+              title={email}
+              />
+              <CardContent>
+                  <Typography variant="body2" color="textPrimary"> <h2>{name}</h2> </Typography>
+                  <Typography variant="body2" color="textSecondary"> {body}</Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <FavoriteIcon style={{color:"red"}} />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <ShareIcon />
+                </IconButton>                
+              </CardActions>
+          </Card>
+      </div>
     );
 };
 

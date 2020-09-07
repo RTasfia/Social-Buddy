@@ -1,0 +1,10 @@
+.post-detail{
+    background-image: linear-gradient(cyan,mediumspringgreen);
+    color: black;
+    padding: 30px;
+    margin: 30px 40px;
+    border-radius: 5px;
+}
+.title{
+    text-align: center;
+}

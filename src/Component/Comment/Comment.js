@@ -51,7 +51,7 @@ const Comment = (props) => {
                   <Typography variant="body2" color="textPrimary"> <h2>{name}</h2> </Typography>
                   <Typography variant="body2" color="textSecondary"> {body}</Typography>
               </CardContent>
-              <CardActions disableSpacing>
+              <CardActions>
                 <IconButton aria-label="add to favorites">
                   <FavoriteIcon style={{color:"red"}} />
                 </IconButton>

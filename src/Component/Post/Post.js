@@ -7,6 +7,9 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
 
 const useStyles = makeStyles({
   root: {
@@ -38,9 +41,14 @@ const Post = (props) => {
                     <Typography className={classes.pos} color="textPrimary"><h2 style={{textAlign : "center"}}>ID: {id}</h2></Typography>
                     <Typography variant="body2"><h2>{title}</h2></Typography>
                     <Typography variant="body2"><h4>{body}</h4></Typography>
-
                 </CardContent>
                 <CardActions>
+                <IconButton aria-label="add to favorites">
+                  <FavoriteIcon style={{color:"red"}} />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <ShareIcon />
+                </IconButton>  
                     <Link to={`/post/${id}`}>  <Button size="small" variant="contained" color="primary">See more</Button></Link>
                 </CardActions>
             </Card>

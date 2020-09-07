@@ -9,7 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import './Comment.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -54,9 +53,6 @@ const Comment = (props) => {
               <CardActions>
                 <IconButton aria-label="add to favorites">
                   <FavoriteIcon style={{color:"red"}} />
-                </IconButton>
-                <IconButton aria-label="share">
-                  <ShareIcon />
                 </IconButton>                
               </CardActions>
           </Card>
